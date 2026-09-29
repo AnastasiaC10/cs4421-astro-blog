@@ -6,6 +6,6 @@ export default getViteConfig({
     globals: true,
     environment: 'node',
     include: ['src/**/*.test.ts', 'src/**/*.spec.ts'],
-    exclude: ['node_modules', 'dist', '.astro'],
+    exclude: ['node_modules', 'dist', '.astro', 'cdk'],
   }
 });
