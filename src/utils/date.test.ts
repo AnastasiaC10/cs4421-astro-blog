@@ -1,4 +1,3 @@
-import { experimental_AstroContainer as AstroContainer } from 'astro/container';
 import { expect, test } from 'vitest';
 import { formatDate } from './date.ts';
 
