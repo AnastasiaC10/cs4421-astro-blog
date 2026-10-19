@@ -1,6 +1,17 @@
 ---
-import AboutHeroImage from '../assets/getting-silver.jpeg';
+import AboutHeroImage from '../assets/images/getting-silver.jpeg';
 import Layout from '../layouts/BlogPost.astro';
+
+import { Image } from 'astro:assets';
+import rainbows from '../assets/images/rainbows.jpeg';
+import brownies from '../assets/images/brownies.jpeg';
+import guides from '../assets/images/guides.jpeg';
+import senior from '../assets/images/SB.jpg';
+
+import ISE from '../assets/images/ISE.jpeg';
+
+import bronze from '../assets/images/getting-bronze.jpeg';
+import silver from '../assets/images/getting-silver.jpeg';
 ---
 
 <Layout
@@ -18,21 +29,28 @@ import Layout from '../layouts/BlogPost.astro';
 	<p>
 		<b>Guides</b> <br/>
 		I've been a Girl Guide since I was six, starting in Wales and continuing in Ireland.
-		I'm now a Senior Brancher and am training to be a leader.
+		I'm now a Senior Brancher and am training to be a leader. <br/>
+		<!--fix formatting of pictures - find way to put them on the sides instead? -->
+		<!-- <Image src={rainbows} alt="Me and my sister at Rainbows" width="200" height="250"/> &nbsp; &nbsp;
+		<Image src={brownies} alt="Me and my sister at Brownies" width="200" height="250"/> <br/>
+		<Image src={guides} alt="Me and my unit getting our National Guide Awards" width="250" height="200"/> &nbsp; &nbsp;
+		<Image src={senior} alt="Me and two other girls doing badges in the dark" width="250" height="200"/> -->
 	</p>
 
 	<p>
 		<b>Bronze & Silver Gaisces</b> <br/>
 		I achieved my bronze gaisce in 2024.
-		For bronze, I volunteered with my church, walked, and did coding. I then hiked 25km on Achill Island. <br/>
+		For bronze, I volunteered with my church, walked, and did coding. I then hiked 25km on Achill Island. <br/> <br/>
 
 		I achieved my silver gaisce in 2025.
-		For silver, I volunteered with a local ladybird unit, swam, and wrote.
+		For silver, I volunteered with a local ladybird unit, swam, and wrote. I then hiked 50km of the East Clare Way. <br/>
+		<!--pictures of getting my bronze & silver gaisces -->
 	</p>
 
 	<p>
 		<b>Other Hobbies</b> <br/>
 		I also like writing and reading.
 		I was a member of my secondary school debate and robotics teams, as well as the creative writing club.
+		<!--pictures of robotics club-->
 	</p>
 </Layout>

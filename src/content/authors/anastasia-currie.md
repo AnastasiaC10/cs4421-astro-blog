@@ -1,6 +1,6 @@
 ---
 name: 'Anastasia Currie'
-avatar: '../../assets/anastasia.jpeg'
+avatar: '../../assets/images/authors/anastasia.jpeg'
 bio: 'Anastasia is a university student working on her gold gaisce.'
 socialLinks:
   - platform: 'GitHub'
