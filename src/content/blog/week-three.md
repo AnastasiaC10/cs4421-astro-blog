@@ -10,7 +10,7 @@ author: 'anastasia-currie'
 
 ####  1/11
 
-I didn't have much time for craft this week as I was in London, but I finished stitching the right border of Natasha's birthday cross-stitch. I also finished off my other Halloween costume earlier in the week by sewing a badge from London ('Tri-Water Area') onto my the sash of my Fireside girl costume.
+I didn't have much time for craft this week as I was in London, but I finished stitching the right border of Natasha's birthday cross-stitch. I also finished off my other Halloween costume earlier in the week by sewing a badge from London ('Tri-Water Area') onto the sash of my Fireside girl costume.
 
 
 ## Walk

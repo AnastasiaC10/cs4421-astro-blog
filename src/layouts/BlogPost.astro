@@ -11,7 +11,7 @@ type Props = CollectionEntry<'blog'>['data'] & {
 	author?: CollectionEntry<'authors'>;
 };
 
-const { title, description, pubDate, updatedDate, heroImage, author } = Astro.props;
+const { title, description, resources, pubDate, updatedDate, heroImage, author } = Astro.props;
 ---
 
 <html lang="en">
@@ -55,6 +55,21 @@ const { title, description, pubDate, updatedDate, heroImage, author } = Astro.pr
 			.last-updated-on {
 				font-style: italic;
 			}
+			.resources {
+				display: flex;
+				gap: 1.5em;
+				align-items: flex-start;
+				margin-top: 1em;
+				padding-top: 1em;
+				border-top: 1px solid rgb(var(--gray-light));
+			}
+			.resources-list {
+				display: flex;
+				gap: 1em;
+				list-style: none;
+				margin: 1em;
+				padding: 0;
+			}
 		</style>
 	</head>
 
@@ -81,6 +96,22 @@ const { title, description, pubDate, updatedDate, heroImage, author } = Astro.pr
 						<hr />
 					</div>
 					<slot />
+					<div class="resources">
+						{
+							resources && resources.length > 0 && (
+								<p>Resources:</p>
+								<ul class="resources-list">
+									{resources.map((link) => (
+										<li>
+											<a href={link.url} target="_blank" rel="noopener noreferrer">
+												{link.text}
+											</a>
+										</li>
+									))}
+								</ul>
+							)
+						}
+					</div>
 					{author && <AuthorBio author={author} />}
 				</div>
 			</article>
