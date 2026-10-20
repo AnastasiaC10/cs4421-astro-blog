@@ -7,6 +7,8 @@ resources:
 pubDate: 'Oct 15 2025'
 heroImage: '../../assets/blog-placeholder-3.jpg'
 author: 'anastasia-currie'
+
+tags: ["Craft", "Kids' Church", "Halloween"]
 ---
 
 ## Craft

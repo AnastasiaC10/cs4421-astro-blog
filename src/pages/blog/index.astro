@@ -10,6 +10,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+const tags = [...new Set(posts.map((post: any) => post.data.tags).flat())];
 ---
 
 <!doctype html>
@@ -19,6 +20,30 @@ const posts = (await getCollection('blog')).sort(
 		<style>
 			main {
 				width: 960px;
+			}
+			a {
+				text-decoration: none;
+				color: black;
+			}
+			.tags {
+				display: flex;
+                flex-wrap: wrap;
+				border-top: 2px dotted;
+				padding: .5em;
+            }
+            .tag {
+				cursor: pointer;
+				margin: .2em;
+				padding-inline: .75em;
+				padding-block: .4em;
+				border-radius: 10px;
+				justify-content: center;
+				align-items: center;
+				display: inline-flex;
+				background-color: #82e78e;
+            }
+			.tag:hover {
+				background-color: #5fa867;
 			}
 			ul {
 				display: flex;
@@ -107,6 +132,14 @@ const posts = (await getCollection('blog')).sort(
 						))
 					}
 				</ul>
+			</section>
+
+			<section>
+				<div class="tags">
+                    {tags.map((tag) => (
+                        <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+                    ))}
+                </div>
 			</section>
 		</main>
 		<Footer />

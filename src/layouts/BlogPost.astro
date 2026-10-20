@@ -11,7 +11,7 @@ type Props = CollectionEntry<'blog'>['data'] & {
 	author?: CollectionEntry<'authors'>;
 };
 
-const { title, description, resources, pubDate, updatedDate, heroImage, author } = Astro.props;
+const { title, description, resources, pubDate, updatedDate, heroImage, author, tags } = Astro.props;
 ---
 
 <html lang="en">
@@ -22,6 +22,10 @@ const { title, description, resources, pubDate, updatedDate, heroImage, author }
 				width: calc(100% - 2em);
 				max-width: 100%;
 				margin: 0;
+			}
+			a {
+				text-decoration: none;
+				color: black;
 			}
 			.hero-image {
 				width: 100%;
@@ -55,20 +59,32 @@ const { title, description, resources, pubDate, updatedDate, heroImage, author }
 			.last-updated-on {
 				font-style: italic;
 			}
-			.resources {
+			.tags {
 				display: flex;
-				gap: 1.5em;
-				align-items: flex-start;
-				margin-top: 1em;
-				padding-top: 1em;
-				border-top: 1px solid rgb(var(--gray-light));
+                flex-wrap: wrap;
+				border-top: 2px dotted;
+				font-size: .75em;
+				padding: .5em;
+            }
+            .tag {
+				cursor: pointer;
+				margin: .2em;
+				padding-inline: .75em;
+				padding-block: .4em;
+				border-radius: 10px;
+				justify-content: center;
+				align-items: center;
+				display: inline-flex;
+				background-color: #82e78e;
+            }
+			.tag:hover {
+				background-color: #5fa867;
 			}
-			.resources-list {
-				display: flex;
-				gap: 1em;
-				list-style: none;
-				margin: 1em;
-				padding: 0;
+			.resource {
+				background-color: #47daff;
+			}
+			.resource:hover {
+				background-color: #2a89a1;
 			}
 		</style>
 	</head>
@@ -96,22 +112,30 @@ const { title, description, resources, pubDate, updatedDate, heroImage, author }
 						<hr />
 					</div>
 					<slot />
-					<div class="resources">
+					<div class="tags">
+						Resources:
 						{
 							resources && resources.length > 0 && (
-								<p>Resources:</p>
-								<ul class="resources-list">
-									{resources.map((link) => (
-										<li>
-											<a href={link.url} target="_blank" rel="noopener noreferrer">
-												{link.text}
-											</a>
-										</li>
-									))}
-								</ul>
+								resources.map((link) => (
+									<a href={link.url} target="_blank" rel="noopener noreferrer" class="tag resource">
+											{link.text}
+									</a>
+								))
 							)
 						}
 					</div>
+
+					<div class="tags">
+						Tagged:
+						{
+							tags && tags.length > 0 && (
+								tags.map((tag) => (
+                        			<a href={`/tags/${tag}`} class="tag">{tag}</a>
+                    			))
+							)
+						}
+					</div>
+
 					{author && <AuthorBio author={author} />}
 				</div>
 			</article>
