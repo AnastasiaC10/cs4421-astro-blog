@@ -1,6 +1,9 @@
 ---
 title: 'Week 1'
 description: 'Week 1: Halloween Costume'
+resources:
+    - text: 'Flower Witch Hat Pattern'
+      url: 'https://youtube.com'
 pubDate: 'Oct 15 2025'
 heroImage: '../../assets/blog-placeholder-3.jpg'
 author: 'anastasia-currie'

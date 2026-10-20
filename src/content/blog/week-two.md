@@ -1,6 +1,9 @@
 ---
 title: 'Week 2'
 description: 'Week 2: Birthday present, London'
+resources:
+    - text: 'Cross Stitch Pattern Maker'
+      url: 'https://flosscross.com/designer'
 pubDate: 'Oct 20 2025'
 heroImage: '../../assets/blog-placeholder-4.jpg'
 author: 'anastasia-currie'
