@@ -7,6 +7,8 @@ resources:
 pubDate: 'Oct 20 2025'
 heroImage: '../../assets/blog-placeholder-4.jpg'
 author: 'anastasia-currie'
+
+tags: ["Craft", "Walking", "Birthday Cross Stitch"]
 ---
 
 ## Craft
