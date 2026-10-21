@@ -3,6 +3,7 @@
 //import mdx from '@astrojs/mdx';
 //import sitemap from '@astrojs/sitemap';
 import { defineConfig, fontProviders } from 'astro/config';
+import { satteri } from "@astrojs/markdown-satteri";
 
 import node from '@astrojs/node';
 
@@ -36,7 +37,11 @@ export default defineConfig({
       },
 	],
 
-  adapter: node({
-    mode: 'standalone',
-  }),
+    adapter: node({
+        mode: 'standalone',
+    }),
+
+    markdown: {
+    processor: satteri(),
+    },
 });
