@@ -8,10 +8,11 @@ if (!post) {
 	return new Response(null, {status: 404});
 }
 
-const { Content } = await render(post);
+const { Content, remarkPluginFrontmatter } = await render(post);
 const author = post.data.author ? await getEntry(post.data.author) : undefined;
 ---
 
 <BlogPost {...post.data} author={author}>
+	<p>{remarkPluginFrontmatter.minutesRead}</p>
 	<Content />
 </BlogPost>

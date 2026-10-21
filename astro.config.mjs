@@ -4,6 +4,7 @@
 //import sitemap from '@astrojs/sitemap';
 import { defineConfig, fontProviders } from 'astro/config';
 import { satteri } from "@astrojs/markdown-satteri";
+import { mdastReadingTimePlugin } from "./src/mdast/mdast-reading-time";
 
 import node from '@astrojs/node';
 
@@ -42,6 +43,8 @@ export default defineConfig({
     }),
 
     markdown: {
-    processor: satteri(),
+    processor: satteri({
+        mdastPlugins: [mdastReadingTimePlugin],
+    }),
     },
 });
