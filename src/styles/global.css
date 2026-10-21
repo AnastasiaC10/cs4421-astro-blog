@@ -139,3 +139,32 @@ hr {
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
+
+/*tags & resources*/
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	border-top: 2px dotted;
+	font-size: .75em;
+	padding: .5em;
+}
+.tag {
+	cursor: pointer;
+	margin: .2em;
+	padding-inline: .75em;
+	padding-block: .4em;
+	border-radius: 10px;
+	justify-content: center;
+	align-items: center;
+	display: inline-flex;
+	background-color: #82e78e;
+}
+.tag:hover {
+	background-color: #5fa867;
+}
+.resource {
+	background-color: #47daff;
+}
+.resource:hover {
+	background-color: #2a89a1;
+}
