@@ -1,10 +1,10 @@
 import type { APIRoute } from "astro";
 
 export const GET: APIRoute = () => {
-    console.info('readiness', 'ready');
+    console.info('readiness', '500');
 
     return Response.json({
-        status: 'ready',
+        status: '500',
         timestamp: new Date()
     });
 };
