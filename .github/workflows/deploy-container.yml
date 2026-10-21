@@ -6,6 +6,7 @@ on:
 jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
+        environment: prod
         steps:
             - uses: actions/checkout@v4
             - run: npm ci && npm run test:unit # 1. Quality Gate
