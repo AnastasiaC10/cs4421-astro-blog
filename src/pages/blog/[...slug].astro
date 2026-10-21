@@ -8,10 +8,25 @@ if (!post) {
 	return new Response(null, {status: 404});
 }
 
-const { Content } = await render(post);
+const { Content, remarkPluginFrontmatter } = await render(post);
 const author = post.data.author ? await getEntry(post.data.author) : undefined;
 ---
 
 <BlogPost {...post.data} author={author}>
+	<style>
+		.reading-time {
+			margin: .2em;
+			padding-inline: .75em;
+			padding-block: .4em;
+			justify-content: center;
+			align-items: center;
+			display: inline-flex;
+			border-radius: 5px;
+			border: 1px solid;
+		}
+	</style>
+
+	<p class="reading-time" slot="reading-time">{remarkPluginFrontmatter.minutesRead}</p>
+
 	<Content />
 </BlogPost>
