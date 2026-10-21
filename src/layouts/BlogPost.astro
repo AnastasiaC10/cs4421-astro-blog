@@ -112,29 +112,33 @@ const { title, description, resources, pubDate, updatedDate, heroImage, author, 
 						<hr />
 					</div>
 					<slot />
-					<div class="tags">
-						Resources:
-						{
-							resources && resources.length > 0 && (
-								resources.map((link) => (
-									<a href={link.url} target="_blank" rel="noopener noreferrer" class="tag resource">
-											{link.text}
-									</a>
-								))
-							)
-						}
-					</div>
-
-					<div class="tags">
-						Tagged:
-						{
-							tags && tags.length > 0 && (
-								tags.map((tag) => (
-                        			<a href={`/tags/${tag}`} class="tag">{tag}</a>
-                    			))
-							)
-						}
-					</div>
+					{
+						resources && resources.length > 0 && (
+							<div class="tags">
+								Resources:
+								{
+										resources.map((link) => (
+											<a href={link.url} target="_blank" rel="noopener noreferrer" class="tag resource">
+													{link.text}
+											</a>
+										))
+								}
+							</div>
+						)
+					}
+					
+					{
+						tags && tags.length > 0 && (
+							<div class="tags">
+								Tagged:
+										{tags.map((tag) => (
+											<a href={`/tags/${tag}`} class="tag">{tag}</a>
+										))}
+									
+								
+							</div>
+						)
+					}
 
 					{author && <AuthorBio author={author} />}
 				</div>
