@@ -3,6 +3,14 @@ title: 'Week 3'
 description: 'Week 3: Birthday present, London'
 pubDate: '27 Oct 2025'
 heroImage: '../../assets/blog-placeholder-2.jpg'
+leftImages:
+    - alt: "an image"
+      image: "../../assets/blog-placeholder-2.jpg"
+    - alt: "an image"
+      image: "../../assets/blog-placeholder-2.jpg"
+rightImage:
+    alt: "an image"
+    image: "../../assets/blog-placeholder-2.jpg"
 author: 'anastasia-currie'
 
 tags: ["Craft", "Walking", "London", "Birthday Cross Stitch"]

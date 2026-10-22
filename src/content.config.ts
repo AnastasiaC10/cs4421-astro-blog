@@ -17,11 +17,24 @@ const blog = defineCollection({
 						url: z.url(),
 					})
 				)
-				.optional(),
+			.optional(),
 			// Transform string to Date object
 			pubDate: z.coerce.date(),
 			updatedDate: z.coerce.date().optional(),
 			heroImage: z.optional(image()),
+			leftImages: z
+				.array (
+					z.object({
+						alt: z.string(),
+						image: image(),
+					})
+				).optional(),
+			rightImage: z
+				.object({
+						alt: z.string(),
+						image: image(),
+					})
+				.optional(),
 			author: reference('authors').optional(),
 			tags: z.array(z.string()).optional(),
 		}),

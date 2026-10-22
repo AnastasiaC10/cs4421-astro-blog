@@ -60,6 +60,7 @@ h4 {
 h5 {
 	font-size: 1.25em;
 }
+
 strong,
 b {
 	font-weight: 700;
@@ -167,4 +168,30 @@ hr {
 }
 .resource:hover {
 	background-color: #2a89a1;
+}
+
+/* columns for pics in blog */
+.left-column {
+  float: left;
+  width: 20%;
+  padding: 10px;  
+}
+
+.main-column {
+	float: left;
+	width: 45%;
+	padding: 10px;
+}
+
+.right-column {
+	float: left;
+	width: 25%;
+	padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
