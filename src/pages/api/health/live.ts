@@ -5,7 +5,7 @@ export const GET: APIRoute = () => {
     console.info('liveness', 'ok', uptime);
 
     return Response.json({
-        status: '500',
+        status: 'ok',
         uptime,
         timestamp: new Date()
     });
