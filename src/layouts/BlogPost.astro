@@ -6,12 +6,13 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+// import Image from 'astro/components/Image.astro';
 
 type Props = CollectionEntry<'blog'>['data'] & {
 	author?: CollectionEntry<'authors'>;
 };
 
-const { title, description, resources, pubDate, updatedDate, heroImage, author, tags } = Astro.props;
+const { title, description, resources, pubDate, updatedDate, heroImage, leftImages, rightImage, author, tags } = Astro.props;
 ---
 
 <html lang="en">
@@ -37,8 +38,6 @@ const { title, description, resources, pubDate, updatedDate, heroImage, author, 
 				box-shadow: var(--box-shadow);
 			}
 			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
 				margin: auto;
 				padding: 1em;
 				color: rgb(var(--gray-dark));
@@ -59,32 +58,12 @@ const { title, description, resources, pubDate, updatedDate, heroImage, author, 
 			.last-updated-on {
 				font-style: italic;
 			}
-			.tags {
-				display: flex;
-                flex-wrap: wrap;
-				border-top: 2px dotted;
-				font-size: .75em;
-				padding: .5em;
-            }
-            .tag {
-				cursor: pointer;
-				margin: .2em;
-				padding-inline: .75em;
-				padding-block: .4em;
-				border-radius: 10px;
-				justify-content: center;
-				align-items: center;
-				display: inline-flex;
-				background-color: #82e78e;
-            }
-			.tag:hover {
-				background-color: #5fa867;
-			}
-			.resource {
-				background-color: #47daff;
-			}
-			.resource:hover {
-				background-color: #2a89a1;
+			.author-bio {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: auto;
+				padding: 1em;
+				color: rgb(var(--gray-dark));
 			}
 		</style>
 	</head>
@@ -109,10 +88,34 @@ const { title, description, resources, pubDate, updatedDate, heroImage, author, 
 							}
 						</div>
 						<h1>{title}</h1>
-						<slot name="reading-time"/>
+						<slot name="reading-time" />
 						<hr />
 					</div>
-					<slot/>
+
+					<div class="row">
+						<div class="left-column">
+							{
+								leftImages && leftImages.length > 0 && (
+									leftImages.map((img) => (
+										<Image width={200} height={350} src={img.image} alt={img.alt} />
+									))
+								)
+							}
+						</div>
+
+						<div class="main-column">
+							<slot />
+						</div>
+						
+						<div class="right-column">
+							<br/>
+							{
+								rightImage && <Image width={296} height={281} src={rightImage.image} alt={rightImage.alt} />
+							}
+							<br/>
+						</div>
+					</div>
+
 					{
 						resources && resources.length > 0 && (
 							<div class="tags">
@@ -141,7 +144,9 @@ const { title, description, resources, pubDate, updatedDate, heroImage, author, 
 						)
 					}
 
-					{author && <AuthorBio author={author} />}
+					<div class="author-bio">
+						{author && <AuthorBio author={author} />}
+					</div>
 				</div>
 			</article>
 		</main>

@@ -2,7 +2,13 @@
 title: 'Week 3'
 description: 'Week 3: Birthday present, London'
 pubDate: '27 Oct 2025'
-heroImage: '../../assets/blog-placeholder-2.jpg'
+heroImage: "../../assets/images/posts/full-border.jpeg"
+leftImages:
+    - alt: "A pale yellow sash with a colourful badge sewn on that says 'Tri-Water Area'."
+      image: "../../assets/images/posts/tri-water.jpeg"
+rightImage:
+    alt: "A cross stitch hoop with aida fabric in it. The aida fabric has a green border stitched into it."
+    image: "../../assets/images/posts/full-border.jpeg"
 author: 'anastasia-currie'
 
 tags: ["Craft", "Walking", "London", "Birthday Cross Stitch"]

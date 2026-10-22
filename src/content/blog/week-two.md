@@ -5,7 +5,15 @@ resources:
     - text: 'Cross Stitch Pattern Maker'
       url: 'https://flosscross.com/designer'
 pubDate: 'Oct 20 2025'
-heroImage: '../../assets/blog-placeholder-4.jpg'
+heroImage: "../../assets/images/posts/analytical-engine.jpeg"
+leftImages:
+    - alt: "A cross stitch hoop with aida fabric in it. The aida fabric has a green border stitched into it."
+      image: "../../assets/images/posts/border-sketch.jpeg"
+    - alt: "A display case with old-fashioned watches in it"
+      image: "../../assets/images/posts/watches.jpeg"
+rightImage:
+    alt: "Charles Babbage's analytical engine"
+    image: "../../assets/images/posts/analytical-engine.jpeg"
 author: 'anastasia-currie'
 
 tags: ["Craft", "Walking", "Birthday Cross Stitch"]

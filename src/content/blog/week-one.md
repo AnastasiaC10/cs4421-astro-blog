@@ -5,7 +5,13 @@ resources:
     - text: 'Flower Witch Hat Pattern'
       url: 'https://youtube.com'
 pubDate: 'Oct 15 2025'
-heroImage: '../../assets/blog-placeholder-3.jpg'
+heroImage: '../../assets/images/posts/witch-hat.jpeg'
+leftImages:
+    - image: '../../assets/images/posts/witch-hat.jpeg'
+      alt: "A purple and green witch hat made to look like a flower"
+rightImage:
+  image: "../../assets/images/posts/wool-scraps.jpeg"
+  alt: "Three small balls, each of a slightly different shade of green"
 author: 'anastasia-currie'
 
 tags: ["Craft", "Kids' Church", "Halloween"]

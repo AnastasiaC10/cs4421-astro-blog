@@ -2,16 +2,20 @@
 import AboutHeroImage from '../assets/images/getting-silver.jpeg';
 import Layout from '../layouts/BlogPost.astro';
 
-// import { Image } from 'astro:assets';
-// import rainbows from '../assets/images/rainbows.jpeg';
-// import brownies from '../assets/images/brownies.jpeg';
-// import guides from '../assets/images/guides.jpeg';
-// import senior from '../assets/images/SB.jpg';
+import rainbows from '../assets/images/rainbows.jpeg';
+import senior from '../assets/images/SB.jpg';
 
-// import ISE from '../assets/images/ISE.jpeg';
+import ISE from '../assets/images/ISE.jpeg';
 
-// import bronze from '../assets/images/getting-bronze.jpeg';
-// import silver from '../assets/images/getting-silver.jpeg';
+const leftImages = [
+	{alt:"Me and my classmates in a human pyramid", image:{src: ISE.src, width: ISE.width, height: ISE.height, format: ISE.format}},
+	{alt:"Me and my sister as rainbows", image:{src: rainbows.src, width: rainbows.width, height: rainbows.height, format: rainbows.format}}
+]
+
+const rightImage = {
+	alt: "Me and some friends doing badges in the dark",
+	image: {src: senior.src, width: senior.width, height: senior.height, format: senior.format}
+}
 ---
 
 <Layout
@@ -19,6 +23,8 @@ import Layout from '../layouts/BlogPost.astro';
 	description="About me"
 	pubDate={new Date('October 02 2026')}
 	heroImage={AboutHeroImage}
+	leftImages={leftImages}
+	rightImage={rightImage}
 >
 	<p>
 		I am an 18-year-old university student.
@@ -30,11 +36,6 @@ import Layout from '../layouts/BlogPost.astro';
 		<b>Guides</b> <br/>
 		I've been a Girl Guide since I was six, starting in Wales and continuing in Ireland.
 		I'm now a Senior Brancher and am training to be a leader. <br/>
-		<!--fix formatting of pictures - find way to put them on the sides instead? -->
-		<!-- <Image src={rainbows} alt="Me and my sister at Rainbows" width="200" height="250"/> &nbsp; &nbsp;
-		<Image src={brownies} alt="Me and my sister at Brownies" width="200" height="250"/> <br/>
-		<Image src={guides} alt="Me and my unit getting our National Guide Awards" width="250" height="200"/> &nbsp; &nbsp;
-		<Image src={senior} alt="Me and two other girls doing badges in the dark" width="250" height="200"/> -->
 	</p>
 
 	<p>
@@ -44,13 +45,11 @@ import Layout from '../layouts/BlogPost.astro';
 
 		I achieved my silver gaisce in 2025.
 		For silver, I volunteered with a local ladybird unit, swam, and wrote. I then hiked 50km of the East Clare Way. <br/>
-		<!--pictures of getting my bronze & silver gaisces -->
 	</p>
 
 	<p>
 		<b>Other Hobbies</b> <br/>
 		I also like writing and reading.
 		I was a member of my secondary school debate and robotics teams, as well as the creative writing club.
-		<!--pictures of robotics club-->
 	</p>
 </Layout>
