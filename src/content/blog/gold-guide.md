@@ -1,8 +1,8 @@
 ---
 title: 'A Guide to the Gold Gaisce'
-description: 'Lorem ipsum dolor sit amet'
+description: 'An explanation of what goes into the gold gaisce'
 pubDate: 'Oct 17 2026'
-heroImage: '../../assets/blog-placeholder-3.jpg'
+heroImage: '../../assets/images/gaisce-logo.png'
 author: 'anastasia-currie'
 ---
 
