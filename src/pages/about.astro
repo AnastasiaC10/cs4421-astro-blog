@@ -7,15 +7,21 @@ import senior from '../assets/images/SB.jpg';
 
 import ISE from '../assets/images/ISE.jpeg';
 
+import croagh from '../assets/images/croagh-patrick.jpg';
+import dinner from '../assets/images/dinner-party.jpg';
+import halloween from '../assets/images/halloween.jpg';
+
 const leftImages = [
 	{alt:"Me and my classmates in a human pyramid", image:{src: ISE.src, width: ISE.width, height: ISE.height, format: ISE.format}},
 	{alt:"Me and my sister as rainbows", image:{src: rainbows.src, width: rainbows.width, height: rainbows.height, format: rainbows.format}}
 ]
 
-const rightImage = {
-	alt: "Me and some friends doing badges in the dark",
-	image: {src: senior.src, width: senior.width, height: senior.height, format: senior.format}
-}
+const rightImages = [
+	{alt: "Me and some friends doing badges in the dark", image: {src: senior.src, width: senior.width, height: senior.height, format: senior.format}},
+	{alt: "Me and some friends on the top of Croagh Patrick", image: {src: croagh.src, width:croagh.width, height:croagh.height, format: croagh.format}},
+	{alt: "Me and some friends in fancy clothes at a dinner party", image: {src: dinner.src, width:dinner.width, height:dinner.height, format: dinner.format}},
+	{alt: "Me and some friends dressed up as a ghost, a witch and an elf for Halloween", image: {src: halloween.src, width:halloween.width, height:halloween.height, format: halloween.format}},
+]
 ---
 
 <Layout
@@ -24,7 +30,7 @@ const rightImage = {
 	pubDate={new Date('October 02 2026')}
 	heroImage={AboutHeroImage}
 	leftImages={leftImages}
-	rightImage={rightImage}
+	rightImages={rightImages}
 >
 	<p>
 		I am an 18-year-old university student.
