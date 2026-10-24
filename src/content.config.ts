@@ -29,12 +29,13 @@ const blog = defineCollection({
 						image: image(),
 					})
 				).optional(),
-			rightImage: z
-				.object({
+			rightImages: z
+				.array (
+					z.object({
 						alt: z.string(),
 						image: image(),
 					})
-				.optional(),
+				).optional(),
 			author: reference('authors').optional(),
 			tags: z.array(z.string()).optional(),
 		}),

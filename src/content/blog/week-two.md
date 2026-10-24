@@ -11,9 +11,9 @@ leftImages:
       image: "../../assets/images/posts/border-sketch.jpeg"
     - alt: "A display case with old-fashioned watches in it"
       image: "../../assets/images/posts/watches.jpeg"
-rightImage:
-    alt: "Charles Babbage's analytical engine"
-    image: "../../assets/images/posts/analytical-engine.jpeg"
+rightImages:
+    - alt: "Charles Babbage's analytical engine"
+      image: "../../assets/images/posts/analytical-engine.jpeg"
 author: 'anastasia-currie'
 
 tags: ["Craft", "Walking", "London", "Birthday Cross Stitch"]
