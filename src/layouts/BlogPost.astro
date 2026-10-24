@@ -97,7 +97,7 @@ const { title, description, resources, pubDate, updatedDate, heroImage, leftImag
 							{
 								leftImages && leftImages.length > 0 && (
 									leftImages.map((img) => (
-										<Image width={200} height={350} src={img.image} alt={img.alt} />
+										<Image src={img.image} alt={img.alt} />
 									))
 								)
 							}
@@ -110,7 +110,7 @@ const { title, description, resources, pubDate, updatedDate, heroImage, leftImag
 						<div class="right-column">
 							<br/>
 							{
-								rightImage && <Image width={296} height={281} src={rightImage.image} alt={rightImage.alt} />
+								rightImage && <Image src={rightImage.image} alt={rightImage.alt} />
 							}
 							<br/>
 						</div>
