@@ -3,7 +3,7 @@ title: 'Week 1'
 description: 'Week 1: Halloween Costume'
 resources:
     - text: 'Flower Witch Hat Pattern'
-      url: 'https://youtube.com'
+      url: 'https://youtu.be/yDSMh3HE8CY'
 pubDate: 'Oct 15 2025'
 heroImage: '../../assets/images/posts/witch-hat.jpeg'
 leftImages:
