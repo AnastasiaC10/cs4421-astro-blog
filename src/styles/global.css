@@ -182,8 +182,8 @@ hr {
 	width: 25vw;
 }
 
-.row:second-child {
-	width: 40vw;
+.row :nth-child(2) {
+	width: 45vw;
 }
 
 .row:after {
