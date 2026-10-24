@@ -7,4 +7,6 @@ socialLinks:
     url: 'https://github.com/AnastasiaC10'
   - platform: 'LinkedIn'
     url: 'https://www.linkedin.com/in/anastasia-currie-3a9045319/'
+  - platform: 'Strava'
+    url: 'https://strava.app.link/4CBrcAGXu7b'
 ---
