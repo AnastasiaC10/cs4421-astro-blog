@@ -16,7 +16,7 @@ rightImage:
     image: "../../assets/images/posts/analytical-engine.jpeg"
 author: 'anastasia-currie'
 
-tags: ["Craft", "Walking", "Birthday Cross Stitch"]
+tags: ["Craft", "Walking", "London", "Birthday Cross Stitch"]
 ---
 
 ## Craft
