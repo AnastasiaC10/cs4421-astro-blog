@@ -44,6 +44,7 @@ h6 {
 	margin: 0 0 0.5rem 0;
 	color: rgb(var(--black));
 	line-height: 1.2;
+	float: center;
 }
 h1 {
 	font-size: 3.052em;
@@ -170,28 +171,30 @@ hr {
 	background-color: #2a89a1;
 }
 
-/* columns for pics in blog */
-.left-column {
-  float: left;
-  width: 20%;
-  padding: 10px;  
-}
-
-.main-column {
-	float: left;
-	width: 45%;
-	padding: 10px;
-}
-
-.right-column {
-	float: left;
-	width: 25%;
-	padding: 10px;
-}
-
 /* Clear floats after the columns */
+.row {
+	display: flex;
+}
+
+.row > div {
+	float: left;
+	padding: 10px;
+	margin-bottom: 10px;
+	margin-right: 5px;
+	width: 25vw;
+	border-right: 2px solid rgb(var(--gray-light));
+}
+
+.row :nth-child(2) {
+	width: 45vw;
+}
+
+.row :last-child {
+	margin-right: 0px;
+	border-right: none;
+}
+
 .row:after {
   content: "";
-  display: table;
   clear: both;
 }

@@ -12,7 +12,7 @@ type Props = CollectionEntry<'blog'>['data'] & {
 	author?: CollectionEntry<'authors'>;
 };
 
-const { title, description, resources, pubDate, updatedDate, heroImage, leftImages, rightImage, author, tags } = Astro.props;
+const { title, description, resources, pubDate, updatedDate, heroImage, leftImages, rightImages, author, tags } = Astro.props;
 ---
 
 <html lang="en">
@@ -93,26 +93,28 @@ const { title, description, resources, pubDate, updatedDate, heroImage, leftImag
 					</div>
 
 					<div class="row">
-						<div class="left-column">
+						<div id="left-col">
 							{
 								leftImages && leftImages.length > 0 && (
 									leftImages.map((img) => (
-										<Image width={200} height={350} src={img.image} alt={img.alt} />
+										<Image src={img.image} alt={img.alt} />
 									))
 								)
 							}
 						</div>
 
-						<div class="main-column">
+						<div>
 							<slot />
 						</div>
 						
-						<div class="right-column">
-							<br/>
+						<div id="right-col">
 							{
-								rightImage && <Image width={296} height={281} src={rightImage.image} alt={rightImage.alt} />
+								rightImages && rightImages.length > 0 && (
+									rightImages.map((img) => (
+										<Image src={img.image} alt={img.alt} />
+									))
+								)
 							}
-							<br/>
 						</div>
 					</div>
 
@@ -152,4 +154,6 @@ const { title, description, resources, pubDate, updatedDate, heroImage, leftImag
 		</main>
 		<Footer />
 	</body>
+
+	<script src="../scripts/blogPost.js"></script>
 </html>
