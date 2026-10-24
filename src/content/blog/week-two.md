@@ -9,9 +9,9 @@ heroImage: "../../assets/images/posts/analytical-engine.jpeg"
 leftImages:
     - alt: "A cross stitch hoop with aida fabric in it. The aida fabric has a green border stitched into it."
       image: "../../assets/images/posts/border-sketch.jpeg"
+rightImages:
     - alt: "A display case with old-fashioned watches in it"
       image: "../../assets/images/posts/watches.jpeg"
-rightImages:
     - alt: "Charles Babbage's analytical engine"
       image: "../../assets/images/posts/analytical-engine.jpeg"
 author: 'anastasia-currie'

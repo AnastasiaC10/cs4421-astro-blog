@@ -179,11 +179,19 @@ hr {
 .row > div {
 	float: left;
 	padding: 10px;
+	margin-bottom: 10px;
+	margin-right: 5px;
 	width: 25vw;
+	border-right: 2px solid rgb(var(--gray-light));
 }
 
 .row :nth-child(2) {
 	width: 45vw;
+}
+
+.row :last-child {
+	margin-right: 0px;
+	border-right: none;
 }
 
 .row:after {

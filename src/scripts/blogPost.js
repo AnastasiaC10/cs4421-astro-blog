@@ -24,11 +24,16 @@ function changeHeights(list, height) {
 
         if (item.height < idealHeight) {
             let diff = idealHeight - item.height;
+            let margin = diff/4;
 
             if (i != 0) {
-                let margin = diff/4;
                 item.style.margin = margin+"px 0px"; //top left (bottom right match)
-            }
+
+                if (i == list.length-1) { //don't have padding on the bottom of the last one
+                    item.style.margin += " "+margin+"px";
+                }
+            } 
+            
         }
         
     }

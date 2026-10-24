@@ -9,6 +9,8 @@ heroImage: '../../assets/images/posts/witch-hat.jpeg'
 leftImages:
     - image: '../../assets/images/posts/witch-hat.jpeg'
       alt: "A purple and green witch hat made to look like a flower"
+    - image: '../../assets/images/posts/hat-stem.jpeg'
+      alt: "The top of the purple and green witch hat"
 rightImages:
     - image: "../../assets/images/posts/wool-scraps.jpeg"
       alt: "Three small balls, each of a slightly different shade of green"
